@@ -2,8 +2,14 @@
 A standard Revel REST API with gRPC for inter-service communication.
 
 ### Non-Revel files:
-app/helloworld/helloworld.proto
-app/controllers/grpc.go
+
+    app/
+        helloworld/
+            helloworld.proto
+    
+    app/
+        controllers/
+            grpc.go
 
 # Welcome to Revel
 
