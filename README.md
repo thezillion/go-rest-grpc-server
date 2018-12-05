@@ -1,3 +1,10 @@
+# Revel + gRPC
+A standard Revel REST API with gRPC for inter-service communication.
+
+### Non-Revel files:
+app/helloworld/helloworld.proto
+app/controllers/grpc.go
+
 # Welcome to Revel
 
 A high-productivity web framework for the [Go language](http://www.golang.org/).
