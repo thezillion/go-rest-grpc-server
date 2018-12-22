@@ -6,7 +6,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	pb "rest-grpc-server/app/helloworld"
+	pb "github.com/thezillion/go-rest-grpc-server/app/helloworld"
 	"google.golang.org/grpc/reflection"
 )
 
@@ -23,7 +23,7 @@ func (c *App) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply
 	return &pb.HelloReply{Message: "Hello " + in.Name}, nil
 }
 
-func main() {
+func InitGrpcServer() {
 	lis, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)

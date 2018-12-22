@@ -2,6 +2,7 @@ package app
 
 import (
 	"github.com/revel/revel"
+	"github.com/thezillion/go-grpc-server/app/controllers"
 )
 
 var (
@@ -48,6 +49,10 @@ var HeaderFilter = func(c *revel.Controller, fc []revel.Filter) {
 	c.Response.Out.Header().Add("Referrer-Policy", "strict-origin-when-cross-origin")
 
 	fc[0](c, fc[1:]) // Execute the next filter stage.
+}
+
+func RunGrpcServerGoroutine() {
+	go controllers.InitGrpcServer()
 }
 
 //func ExampleStartupScript() {
